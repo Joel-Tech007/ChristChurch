@@ -28,7 +28,6 @@ nav .navbar{
   align-items: center;
   justify-content: space-between;
   margin: auto;
-  /* background: red; */
   padding: 0 50px;
 }
 .navbar .logo a{
@@ -305,8 +304,24 @@ nav .navbar .links li .sub-menu li{
 /* Start */
 
 .nav_head{
-  height: 73px;
+  height: 10px;
 }
+/* st */
+.events h1{
+  font-weight: 500;
+  font-size: 30px ;
+
+}
+/* end */
+
+.intro_head h2{
+
+  font-weight: 500;
+  font-size: 25px ;
+
+
+}
+
 .Start_head{
   height: 80vh;
   color: rgb(51, 51, 51);
@@ -550,6 +565,10 @@ nav .navbar .links li .sub-menu li{
 
 
 }
+.About_Us h1{
+  font-weight: 500;
+  font-size: 35px;
+}
 @media (max-width:800px){
 
   .About_Us{
@@ -747,9 +766,12 @@ nav .navbar .links li .sub-menu li{
     bottom: 0px;
   }
 .Latest{
-  height: 700px;
+  height: 800px;
   width: 100%;
   
+}
+.H2{
+  font-size: 10px;
 }
 
 }
@@ -862,11 +884,13 @@ nav .navbar .links li .sub-menu li{
 }
 
 @media (max-width:800px){
-
+  body{
+    overflow-y: scroll;
+  }
 
   .Blog{
     width: 100%;
-    height: 300px;
+    height: 350px;
     margin: 5px;
     
   }
@@ -892,8 +916,14 @@ nav .navbar .links li .sub-menu li{
   .Gallery{
             height: 500px;
             width: 100%;
-            
             text-align: center;
+}
+.Gallery h2{
+  font-weight: 500;
+  font-size: 32px;
+
+
+
 }
 .pics_p{
           width: 100%;
@@ -982,3 +1012,311 @@ nav .navbar .links li .sub-menu li{
   background-color: #fff;
   color: #3E8DA8;
 }
+
+/* start */
+
+
+/* end */
+
+/* st */
+
+.why-choose-us p{
+  font-weight: 100;
+  font-size: 20px;
+  text-align: center;    
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: black;
+}
+
+
+
+.why-choose-us h2{
+  font-weight: 500;
+  font-size: 30px;
+  text-align: center;    
+  margin-bottom: 10px;
+}
+
+
+.why-choose-us h3{
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;    
+  color: #202e3b;
+  margin-bottom: 10px;
+}
+
+.why-choose-us{
+                
+                width: 100%;
+                height: 400px;
+                
+
+
+}
+.reasons{
+  height: 400px;
+  width: 100%;
+
+  padding: 12px 0;
+
+}
+.reasons .reason {
+
+  /* padding: 4px 32px; */
+  margin-left: 4px;
+  box-shadow: 4px 4px 16px black;
+  border-radius: 4px;
+  transition: 0.7s ease;
+  
+  
+}
+.reason{
+  float: left;
+  height: 300px;
+  width: 33%;
+
+  
+}
+
+.reasons .reason:hover{
+
+  color: rgb(175, 150, 6);  
+  box-shadow: 4px 4px 16px  rgb(175, 150, 6);
+ 
+
+}
+
+.fa-home{
+  color: #202e3b;
+  font-size: 40px;
+}
+
+.fa-mobile{
+   color: #202e3b;
+  font-size: 40px;
+}
+
+.fa-comments{
+   color: #202e3b;
+  font-size: 40px;
+}
+
+.fa-pencil-square-o{
+   color: #202e3b;
+  font-size: 40px;
+}
+
+
+@media (max-width:800px){
+
+  
+.why-choose-us{
+              height: 1000px;
+              margin-top: 70px;
+              
+}
+
+  .reason {
+    float: none;
+    width: 100%;
+    height:300px;
+  }
+
+}
+/* end */
+
+/* st mis_vis */
+
+.Mis_Vis{
+          /* display: none; */
+          height: 400px;
+          width: 100%;
+          margin-top: 5px;
+          padding: 10px ;
+          background-image: url(pics/bible.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          
+        }
+        .Mis_Vis h1{
+          text-align: center;
+          font-weight: 500;
+          font-size: 32px;
+          
+        }
+        .Mis{
+          /* display: none; */
+          height: 91.66%;
+          width: 50%;
+          float: left;
+          align-items: center;
+          text-align: center;
+          justify-content: center;
+          justify-items: center;
+          display: flex; 
+          box-shadow: 4px 4px 16px black;
+          transition: .6s ease;
+          
+        }
+        .Vis{
+          width: 100%;
+          opacity: 1;
+          height: 30%;
+          transition: .5s;
+            
+
+        }
+        .Vis h2{
+          font-weight: 500;
+          font-size: 33px;
+
+        }
+        .Vis:hover{
+          opacity: 1;
+        }
+        .Mis:hover{
+          opacity: 1;
+        }
+        .Vis p{
+          font-weight: 500;
+          font-size: 25px;
+          text-align: center;    
+          color: #202e3b;
+          margin-bottom: 10px;
+        }
+
+        
+@media (max-width:800px){
+
+  .Mis{
+    height: 50%;
+    width: 100%;
+    float: none;
+  }
+  
+  .Mis_Vis{
+
+    background-color:beige ;
+    background-image: none;
+    height: 700px;
+    width: 100%;
+  
+  }
+    
+  
+  .Mis{
+  border-bottom: 2px solid gold;    
+    margin-bottom: 10px;
+}
+
+}
+.Mis_Vis button{
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-top: 10px;
+  transition: .5s ease-in-out;
+  color: white;
+}
+
+.Mis_Vis button:hover{
+  background-color: white;
+  color: black;
+}
+.Mis_Vis button h4{
+  font-size: 19px;  
+  font-weight: 200 ;
+  
+}
+
+
+/* end mis_vis */
+
+.Enter_to{
+  font-weight: 400;
+  font-size: 30px;
+}
+
+/* slide show */
+
+
+
+.gallery-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+/* Image position and sizes to replicate the original layout */
+.gallery img:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery img:nth-child(2) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.gallery img:nth-child(3) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.gallery img:nth-child(4) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.gallery img:nth-child(5) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive layout for mobile view */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .gallery img:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .gallery img:nth-child(1),
+  .gallery img:nth-child(2),
+  .gallery img:nth-child(3),
+  .gallery img:nth-child(4),
+  .gallery img:nth-child(5) {
+    grid-column: span 1;
+  }
+}
+/* /end */
+
+
