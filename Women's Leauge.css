@@ -337,7 +337,7 @@ marquee:hover{
     color: black;
 }
 
-@media (max-width:800px){
+  @media (max-width:800px){
     
     .hh{
         font-size: 21px;
