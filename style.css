@@ -562,66 +562,92 @@ nav .navbar .links li .sub-menu li{
   height: 600px;
   box-sizing: border-box;
   background-color: rgb(238, 238, 238);
+  padding-top: 5px;
+  padding-bottom:5px ;
+  /* display: flex; */
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
 
 
 }
-.About_Us h1{
+.us{
+
+      width: 32%;
+      height: 550px;
+      float: left;  
+      margin: auto;
+      padding: 10px;
+      
+
+}
+.abt_top{
+
+          width: 99%;
+          height: 70%;
+          background-image: url(pics/bible.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          
+}
+.abt_btm{
+
+          width: 99%;
+          height: 30%;
+          background-color: rgb(202, 198, 198);
+          padding:10px ;
+          padding-left: 15px;
+          font-weight: 300;
+          font-size: 17px;
+
+}
+
+.abt_btm button{
+
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background-color: #3E8DA8;
+  color: white;
+  transition: .5s;
+  font-weight: 300;
+  font-size: 13px;
+}
+.abt_btm button:hover{
+  
+  
+
+}
+*{
+  box-sizing: border-box;
+}
+ .hh1{
   font-weight: 500;
   font-size: 35px;
+  display: block;
+  padding: 10px;
+  text-align: center;
 }
 @media (max-width:800px){
 
   .About_Us{
     width: 100%;
-    height: 1000px;
+    height: 1500px;
+  }
+
+  .us{
+    flex-direction: column;
+    float: none;
+    width: 100%;
+    height: 32%;
   }
 }
+
 .About_Us h1{
   margin: 0px 0px;
   text-align: center;
-}
-.us{
-  height: 100%;
-  width: 33%;
-  float: left;
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  justify-items: center;
-  align-items: center;
-
-
-}
-@media (max-width:800px){
-  .us{
-    float: none;
-
-    width: 100%;
-    text-align: center;
-  justify-content: center;
-  display: flex;
-  justify-items: center;
-  align-items: center;
-
-  }
-  #us{
-    display: none;
-  }
-}
-
-.About{
-  color: rgb(51, 51, 51);
-  height: 80%;
-  width: 80%;
-
-}
-@media (max-width:800px){
-                            .About{
-                              height: 80%;
-                              width: 80%;
-
-                            }  
-
 }
 .pics{
   height: 50%;
@@ -1018,6 +1044,7 @@ nav .navbar .links li .sub-menu li{
 
 /* end */
 
+
 /* st */
 
 .why-choose-us p{
@@ -1320,3 +1347,7 @@ nav .navbar .links li .sub-menu li{
 /* /end */
 
 
+/* St */
+
+
+/* end */
