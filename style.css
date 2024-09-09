@@ -462,9 +462,12 @@ nav .navbar .links li .sub-menu li{
   opacity: .9;
   color: white;
   transition: 0.8s;
+  padding: 10px;
 }
 .trans p{
   color: transparent;
+  font-weight: 300;
+  font-size: 19px;
   
 }
 .trans:hover{
@@ -564,7 +567,7 @@ nav .navbar .links li .sub-menu li{
   background-color: rgb(238, 238, 238);
   padding-top: 5px;
   padding-bottom:5px ;
-  /* display: flex; */
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-items: center;
@@ -616,8 +619,8 @@ nav .navbar .links li .sub-menu li{
   font-size: 13px;
 }
 .abt_btm button:hover{
-  
-  
+
+                        background-color: #1a4857;
 
 }
 *{
@@ -635,6 +638,7 @@ nav .navbar .links li .sub-menu li{
   .About_Us{
     width: 100%;
     height: 1500px;
+    display: block  ;
   }
 
   .abt_btm button{
@@ -662,45 +666,23 @@ nav .navbar .links li .sub-menu li{
   background-size: cover;
 
 }
-.PIC{
-  height: 50%;
-  width: 100%;
-  text-align: left;
-}
-.BUT button{
-  height: 50px;
-  width: 40%;
-  background-color:#3E8DA8;
-  border: 0px ;
-  color:white ;
-  transition: 1s;
-  
-}
-.BUT{
-  
-  text-align: center;
-  justify-content: center;
-  justify-items:center ;
-  align-items: center;
-
-}
-.BUT button:hover{
-  background-color: rgb(69, 69, 69);
-}
-.BUT a{
-  text-decoration: none;
-  color: white;
-}
-
-
 /* end */
 
 /* start */
+.late{
+        text-align: center;
+            
+        font-weight: 400;
+        font-size: 32px;
+        padding: 10px;
+
+}
+
 .Latest{
-  height: 500px;
+  height: 550px;
   width: 100%;
   background-color: rgb(255, 255, 255);
- display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   justify-items: center ;
@@ -730,11 +712,21 @@ nav .navbar .links li .sub-menu li{
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  padding: 10px;
   justify-items:center ;
   text-align: center;
 }
+.Middle_two h2{
+
+  font-weight: 500;
+  font-size: 25px;
+
+}
 .Middle_two{
+  padding: 10px;
+  padding-left: 15px;
+  font-weight: 300;
+  font-size: 18px;
   color: rgb(51, 51, 51);
   display: flex;
   align-items: center;
@@ -767,23 +759,26 @@ nav .navbar .links li .sub-menu li{
 @media (max-width:800px){
 
   .Middle_two h2{
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: 300;
+
   }
   .Middle_two{
-    width: 50%;
-    float: left;
-    height: 50%;
+    width: 100%;
+    float: none;
+    height: 200px;
     
   }
 
   #First_one{
-    float: left;
-    width: 50%;
-    height: 50%;
+    
+    width: 100%;
+    height: 200px;
+    padding: 20px;
   }
   #one{
     width: 100%;
-    height: 50%;
+    height: 200px;
     /* background-color: black;  */
     display: flex;    
     justify-content: center;
@@ -798,12 +793,9 @@ nav .navbar .links li .sub-menu li{
     bottom: 0px;
   }
 .Latest{
-  height: 800px;
+  height: 2000px;
   width: 100%;
-  
-}
-.H2{
-  font-size: 10px;
+ 
 }
 
 }
