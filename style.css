@@ -805,23 +805,30 @@ nav .navbar .links li .sub-menu li{
 
 /* start */
 .why{
-  height: 500px;
+  height: 550px;
   width: 100%;
-  background-image: url(pics/Har.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color:#215668;
   align-items: center;
   display: flex;
   justify-content: left;
   justify-items: left;
   text-align: left;
   color: rgb(51, 51, 51);
-  }
+  /* pad: 112px;
+  -webkit-animation: alternate; */
+}
+
 .wiy{
+  
   margin-top: 100px;
   color: rgb(51, 51, 51);
   height: 100%;
   width: 50%;
+  padding: 10px;
+  padding-left: 20px;
+
+  background-size: cover;
+
 }
 
 @media (max-width:800px){
@@ -829,33 +836,124 @@ nav .navbar .links li .sub-menu li{
   .wiy{
     margin-top: 0px;
     width: 100%;
-    
+    padding-left: 15px;    
   }
 }
 
 /* end */
 
 /* Start */
-
+*{
+  box-sizing: border-box;
+}
 .Blog{
   height: 200px;
   width: 100%;
 }
 
+.ii{
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  
+}
+
+.i_i{
+
+      width: 32%;
+      height: 100%;
+      display: flex;
+      justify-items: center;
+      justify-content: center;
+      align-items: center;
+
+}
+
+#i{
+
+      background-color: #3E8DA8;
+      padding: 20px;  
+      color: ghostwhite;
+      display: flex;
+      justify-items: center;
+      justify-content: center;
+      align-items: center;
+      transition: .5s;
+}
+
+#ii{
+
+  background-color: #3E8DA8;
+  padding: 20px;  
+  color: ghostwhite;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+}
+
+#iii{
+
+  background-color: #3E8DA8;
+  padding: 20px;  
+  color: ghostwhite;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+}
+
+#i:hover{
+  color: #3E8DA8;
+
+  background-color: ghostwhite;
+
+}
+
+#ii:hover{
+  color: #3E8DA8;
+
+  background-color: ghostwhite;
+
+}
+
+#iii:hover{
+  color: #3E8DA8;
+
+  background-color: ghostwhite;
+
+}
 .B_L{
   background-color: #3E8DA8;
   color: white;
 }
 
-
-.B_L:first-child{
-
-
-  
-
-
-
+.B_L h3{
+  font-weight: 400;
+  font-size: 20px;
 }
+
+.B_L h1{
+  font-weight: 500;
+  
+}
+.B_LL p{
+  font-weight: 300;
+  font-size: 15px;
+  padding: 5px;
+}
+.B_LL h2{
+  font-weight: 500;
+  padding: 5px;
+}
+
 
 .B_LL p:first-child{
   
@@ -866,6 +964,8 @@ nav .navbar .links li .sub-menu li{
 
 .B_LL p{
   color: rgb(51, 51, 51);
+  
+  padding: 5px;
 }
 
 .B_LL h2{
@@ -937,342 +1037,16 @@ nav .navbar .links li .sub-menu li{
       
       
   }
-  .Gallery{
-            height: 500px;
-            width: 100%;
-            text-align: center;
-}
-.Gallery h2{
-  font-weight: 500;
-  font-size: 32px;
 
-
-
-}
-.pics_p{
-          width: 100%;
-          height: 100%;
-          box-sizing: border-box;
-        }
-        .p_p{
-          height: 100%;
-          float: left;
-          width: 33%;
-          background-size: cover;
-}
-.mid_p{
-  width: 100%;
-  height: 50%;
- background-size: cover; 
-}
-
-@media (max-width:800px){
-  .Gallery{
-    height: 250px;
-  }
-}
-
-
-.ii{
-
-  height: 100%;
-  width: 100%;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center; 
-  justify-items: center;
- 
-}
-
-#ii{
-  float: left;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center; 
-  justify-items: center;
-  width: 33%;
-  height: 100%;
-
-    }
-
-#i{
-      width: 33%;
-      height: 100%;   
-      float: left;
-      display: flex;
-      text-align: center;
-      align-items: center;
-      justify-content: center; 
-      justify-items: center;
-
-}
-
-#iii{
-    width: 33%;
-    height: 100%;
-    float: left;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center; 
-    justify-items: center;
-
-}
-.i_i{
-
-      background-color: #3E8DA8;
-      width: 30%;
-      height: 30%;
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      justify-items: center;
-      transition: 0.5s;
-      color: #fff;
-}
-.i_i:hover{
-  background-color: #fff;
-  color: #3E8DA8;
-}
 
 /* start */
 
-
-/* end */
-
-
-/* st */
-
-.why-choose-us p{
-  font-weight: 100;
-  font-size: 20px;
-  text-align: center;    
-  margin-bottom: 10px;
-  margin-top: 10px;
-  color: black;
-}
-
-
-
-.why-choose-us h2{
-  font-weight: 500;
-  font-size: 30px;
-  text-align: center;    
-  margin-bottom: 10px;
-}
-
-
-.why-choose-us h3{
-  font-weight: 500;
-  font-size: 20px;
-  text-align: center;    
-  color: #202e3b;
-  margin-bottom: 10px;
-}
-
-.why-choose-us{
-                
-                width: 100%;
-                height: 400px;
-                
-
-
-}
-.reasons{
-  height: 400px;
-  width: 100%;
-
-  padding: 12px 0;
-
-}
-.reasons .reason {
-
-  /* padding: 4px 32px; */
-  margin-left: 4px;
-  box-shadow: 4px 4px 16px black;
-  border-radius: 4px;
-  transition: 0.7s ease;
-  
-  
-}
-.reason{
-  float: left;
-  height: 300px;
-  width: 33%;
-
-  
-}
-
-.reasons .reason:hover{
-
-  color: rgb(175, 150, 6);  
-  box-shadow: 4px 4px 16px  rgb(175, 150, 6);
- 
-
-}
-
-.fa-home{
-  color: #202e3b;
-  font-size: 40px;
-}
-
-.fa-mobile{
-   color: #202e3b;
-  font-size: 40px;
-}
-
-.fa-comments{
-   color: #202e3b;
-  font-size: 40px;
-}
-
-.fa-pencil-square-o{
-   color: #202e3b;
-  font-size: 40px;
-}
-
-
-@media (max-width:800px){
-
-  
-.why-choose-us{
-              height: 1000px;
-              margin-top: 70px;
-              
-}
-
-  .reason {
-    float: none;
-    width: 100%;
-    height:300px;
-  }
-
-}
-/* end */
-
-/* st mis_vis */
-
-.Mis_Vis{
-          /* display: none; */
-          height: 400px;
-          width: 100%;
-          margin-top: 5px;
-          padding: 10px ;
-          background-image: url(pics/bible.jpg);
-          background-repeat: no-repeat;
-          background-size: cover;
-          
-        }
-        .Mis_Vis h1{
-          text-align: center;
-          font-weight: 500;
-          font-size: 32px;
-          
-        }
-        .Mis{
-          /* display: none; */
-          height: 91.66%;
-          width: 50%;
-          float: left;
-          align-items: center;
-          text-align: center;
-          justify-content: center;
-          justify-items: center;
-          display: flex; 
-          box-shadow: 4px 4px 16px black;
-          transition: .6s ease;
-          
-        }
-        .Vis{
-          width: 100%;
-          opacity: 1;
-          height: 30%;
-          transition: .5s;
-            
-
-        }
-        .Vis h2{
-          font-weight: 500;
-          font-size: 33px;
-
-        }
-        .Vis:hover{
-          opacity: 1;
-        }
-        .Mis:hover{
-          opacity: 1;
-        }
-        .Vis p{
-          font-weight: 500;
-          font-size: 25px;
-          text-align: center;    
-          color: #202e3b;
-          margin-bottom: 10px;
-        }
-
-        
-@media (max-width:800px){
-
-  .Mis{
-    height: 50%;
-    width: 100%;
-    float: none;
-  }
-  
-  .Mis_Vis{
-
-    background-color:beige ;
-    background-image: none;
-    height: 700px;
-    width: 100%;
-  
-  }
-    
-  
-  .Mis{
-  border-bottom: 2px solid gold;    
-    margin-bottom: 10px;
-}
-
-}
-.Mis_Vis button{
-  height: 40px;
-  background-color: transparent;
-  border: 2px solid white;
-  border-radius: 10px;
-  margin-top: 10px;
-  transition: .5s ease-in-out;
-  color: white;
-}
-
-.Mis_Vis button:hover{
-  background-color: white;
-  color: black;
-}
-.Mis_Vis button h4{
-  font-size: 19px;  
-  font-weight: 200 ;
-  
-}
-
-
-/* end mis_vis */
-
-.Enter_to{
-  font-weight: 400;
-  font-size: 30px;
-}
-
-/* slide show */
-
-
-
 .gallery-title {
   text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 400;
+  padding: 10px;
+  /* margin-bottom: 20px; */
 }
 
 .gallery {
@@ -1345,7 +1119,388 @@ nav .navbar .links li .sub-menu li{
 /* /end */
 
 
-/* St */
+/* st */
 
+.why-choose-us p{
+  font-weight: 100;
+  font-size: 20px;
+  text-align: center;    
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: black;
+}
+
+
+
+.why-choose-us h2{
+                    font-weight: 400;
+                    font-size: 26px;
+                    text-align: center;
+                    
+}
+
+.why-choose-us h2:first-child{
+
+  font-weight: 500;
+  font-size: 30px;
+  text-align: center;    
+  margin: 10px;
+  padding: 10px;
+
+
+}
+
+
+.why-choose-us h3{
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;    
+  color: #202e3b;
+  margin-bottom: 10px;
+}
+
+.why-choose-us{
+                
+                width: 100%;
+                height: 400px;
+                
+
+
+}
+.reasons{
+  height: 400px;
+  width: 100%;
+
+  padding: 12px 0;
+
+}
+.reasons .reason {
+
+  /* padding: 4px 32px; */
+  margin-left: 4px;
+  box-shadow: 4px 4px 16px black;
+  border-radius: 4px;
+  transition: 0.7s ease;
+  
+  
+}
+.reason{
+  float: left;
+  height: 300px;
+  width: 33%;
+
+  
+}
+#sun{
+
+  background-color: #3E8DA8;
+  padding: 20px;  
+  color: ghostwhite;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+  
+}
+#sun:hover{
+
+  background-color: transparent;
+  color: #3E8DA8;
+  
+  }
+
+.reasons .reason:hover{
+
+  color: #3E8DA8; 
+  box-shadow: 4px 4px 16px #3E8DA8;
+  background-color: ghostwhite;
+ 
+
+}
+
+.fa-home{
+  color: #202e3b;
+  font-size: 40px;
+}
+
+.fa-mobile{
+   color: #202e3b;
+  font-size: 40px;
+}
+
+.fa-comments{
+   color: #202e3b;
+  font-size: 40px;
+}
+
+.fa-pencil-square-o{
+   color: #202e3b;
+  font-size: 40px;
+}
+
+
+@media (max-width:800px){
+
+  
+.why-choose-us{
+              height: 1000px;
+              
+              margin-top: 70px;
+              
+}
+
+  .reason {
+    float: none;
+    width: 100%;
+    height:300px;
+  }
+
+}
+/* end */
+
+/* st mis_vis */
+
+.Mis_Vis{
+          
+          border-radius: 10px;
+          height: 550px;
+          width: 100%;
+          margin-top: 5px;
+          padding: 10px ;
+          /* background-image: url(pics/bible.jpg); */
+          background-repeat: no-repeat;
+          background-size: cover;
+          
+        }
+        .Mis_Vis h1{
+          text-align: center;
+          font-weight: 500;
+          font-size: 32px;
+          
+        }
+        .Mis{
+          padding: 10px;
+          height: 91.66%;
+          width: 50%;
+          float: left;
+          align-items: center;
+          text-align: center;
+          justify-content: center;
+          justify-items: center;
+          display: flex; 
+          box-shadow: 4px 4px 16px black;
+          transition: .6s ease;
+          
+        }
+        .Vis{
+          padding: 10px;
+          width: 100%;
+          opacity: 1;
+          height: 70%;
+          transition: .5s;
+          
+
+        }
+
+        .Vis h2{
+          font-weight: 500;
+          font-size: 33px;
+
+        }
+        .Vis:hover{
+          opacity: 1;
+        }
+        .Mis:hover{
+          opacity: 1;
+        }
+        .Vis p{
+          font-weight: 500;
+          font-size: 25px;
+          text-align: center;    
+          color: #202e3b;
+          margin-bottom: 10px;
+        }
+
+        
+@media (max-width:800px){
+
+  .Mis{
+    height: 50%;
+    width: 100%;
+    float: none;
+  }
+  
+  .Mis_Vis{
+    
+    background-color: #3E8DA8;
+    background-image: none;
+    height: 1300px;
+    width: 100%;
+    margin-bottom: 75px;
+  }
+  .Mis_Vis h1{
+
+    padding: 10px;
+  }
+  
+  .Mis{
+    box-shadow: 2px solid black;
+  border-bottom: 2px solid gold;    
+    margin-bottom: 30px;
+}
+
+.Mis_Vis button{
+  
+  border: 2px solid rgb(175, 150, 6);
+  color: black;
+}
+}
+.Mis_Vis button{
+  
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-top: 10px;
+
+  transition: .5s ease-in-out;
+  color: white;
+  padding: 10px;
+}
+
+.Mis_Vis button:hover{
+  background-color: white;
+  color: black;
+  
+}
+.Mis_Vis button h4{
+  font-size: 19px;  
+  font-weight: 200 ;
+  
+}
+
+
+/* end mis_vis */
+
+.Enter_to h1{
+  font-weight: 400;
+  font-size: 30px;
+}
+
+/* slide show */
+
+
+
+
+/* St */
+/* footer */
+
+
+.footer {
+  
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  background: #3E8DA8;
+  border-radius: 6px;
+}
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding: 60px;
+}
+.footer-row .footer-col h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.footer-col .links {
+  margin-top: 20px;
+}
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.footer-col .links li a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer-col .links li a:hover {
+  color: #fbfbfb;
+}
+.footer-col p {
+  margin: 20px 0;
+  color: #fff;
+  max-width: 300px;
+}
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489C6 ;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+}
+.footer-col input::placeholder {
+  color: #fff;
+}
+ .footer-col form button {
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+.footer-col form button:hover {
+  background: #cecccc;
+}
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+.footer-col .icons i {
+  color: #afb6c7;
+}
+.footer-col .icons i:hover  {
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+  }
+  .footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+  }
+  .footer-col form {
+    display: block;
+  }
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+  .footer-col form button {
+    margin: 10px 0 0 0;
+  }
+}
 
 /* end */
