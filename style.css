@@ -1245,7 +1245,7 @@ nav .navbar .links li .sub-menu li{
 
   
 .why-choose-us{
-              height: 1200px;
+              height: 1300px;
               
               margin-top: 70px;
               
@@ -1254,7 +1254,7 @@ nav .navbar .links li .sub-menu li{
   .reason {
     float: none;
     width: 100%;
-    height:300px;
+    height:350px;
   }
 
 }
@@ -1360,18 +1360,18 @@ nav .navbar .links li .sub-menu li{
 .Mis_Vis button{
   
   background-color: transparent;
-  border: 2px solid white;
+  border: 2px solid black;
   border-radius: 10px;
   margin-top: 10px;
 
   transition: .5s ease-in-out;
-  color: white;
+  color: black;
   padding: 10px;
 }
 
 .Mis_Vis button:hover{
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   
 }
 .Mis_Vis button h4{
