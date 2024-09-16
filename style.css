@@ -1,5 +1,7 @@
 /* Googlefont Poppins CDN Link */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -28,6 +30,7 @@ nav .navbar{
   align-items: center;
   justify-content: space-between;
   margin: auto;
+  /* background: red; */
   padding: 0 50px;
 }
 .navbar .logo a{
@@ -301,10 +304,12 @@ nav .navbar .links li .sub-menu li{
 } 
 }
 
+
 /* Start */
 
-.nav_head{
+.navbar{
   height: 10px;
+  /* background-color:transparent; */
 }
 /* st */
 .events h1{
@@ -335,9 +340,11 @@ nav .navbar .links li .sub-menu li{
   height: 100%;
   width: 100%;
   box-sizing: border-box;
+  padding: 10px;
 }
 #intro_head{
   
+
   text-align: center;
       display: flex;
     justify-content: center;
@@ -347,6 +354,13 @@ nav .navbar .links li .sub-menu li{
   float: left;
   width: 50%;
   
+}
+.head_intro{
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(pics/aaaaa.jpg);
+    height: 400px;    
 }
 .intro_head h1{
   font-size: 60px;
@@ -780,7 +794,6 @@ nav .navbar .links li .sub-menu li{
   #one{
     width: 100%;
     height: 200px;
-    /* background-color: black;  */
     display: flex;    
     justify-content: center;
     justify-items: center;
@@ -824,20 +837,33 @@ nav .navbar .links li .sub-menu li{
   margin-top: 100px;
   color: rgb(51, 51, 51);
   height: 100%;
-  width: 50%;
+  width: 45%;
   padding: 10px;
   padding-left: 20px;
-
+  float: left;
   background-size: cover;
 
+}
+#yiw{
+  /* background-image: url(pics/passss.png); */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 100%;
+  width: 45%;
+  float: left;
+  
 }
 
 @media (max-width:800px){
 
-  .wiy{
+  #wiy{
     margin-top: 0px;
     width: 100%;
     padding-left: 15px;    
+  }
+  #yiw{
+    display: none;
   }
 }
 
@@ -872,11 +898,12 @@ nav .navbar .links li .sub-menu li{
       justify-items: center;
       justify-content: center;
       align-items: center;
-
-}
-
-#i{
-
+      margin: 10px;
+    }
+    
+    #i{
+      
+      /* border-right:2px solid black ;   */
       background-color: #3E8DA8;
       padding: 20px;  
       color: ghostwhite;
@@ -913,7 +940,6 @@ nav .navbar .links li .sub-menu li{
 
 #i:hover{
   color: #3E8DA8;
-
   background-color: ghostwhite;
 
 }
@@ -1334,7 +1360,7 @@ nav .navbar .links li .sub-menu li{
   
   .Mis_Vis{
     
-    background-color: #3E8DA8;
+    
     background-image: none;
     height: 1300px;
     width: 100%;

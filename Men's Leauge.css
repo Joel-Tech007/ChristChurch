@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -27,6 +28,7 @@ nav .navbar{
   align-items: center;
   justify-content: space-between;
   margin: auto;
+  /* background: red; */
   padding: 0 50px;
 }
 .navbar .logo a{
@@ -398,6 +400,7 @@ marquee:hover{
 
 
 /* start */
+
 *{
   box-sizing: border-box;
 }
@@ -416,6 +419,7 @@ marquee:hover{
 
   
 }
+
  h1{
   text-align: center;
   font-weight: 400;
@@ -428,43 +432,52 @@ marquee:hover{
 
 @media (max-width:800px){
 
+  .eve p{
+
+    font-size: 15px;
+    font-weight: 300;
+  }
+
   .Word{
     padding: 10px;
     height: 500px;
-    width: 95%;
-    
+    width: 95%;  
     margin: 10px;
   }
+
    h1{
 
         font-size: 25px;
 
   }
+
     #pic_word{
 
                 display: none;
 
     }
+
     #word_pic{
 
       width: 100%;
       opacity:1;
       background-size: cover;
       background-repeat: no-repeat;
-        background-position: center;
+      background-position: center;
     }
    
     .pres_speech{
 
                     color: black;
                     height: fit-content;
-
                     width: 90%;
 
     }
+
     .vod{
       display: none;
     }
+
     video{
       display: none;
     }
@@ -486,8 +499,8 @@ marquee:hover{
 
   .Projects{
         height: 500px;
-        background-color: #afb6c7;
-
+        
+        width: 100%;
   }
 
 }
@@ -509,15 +522,20 @@ marquee:hover{
                     font-size: 25px;
 
           }
+          
           #word_pic{
 
                       background-image: url(pics/passss.png);
                       background-repeat: no-repeat;
                       background-size: cover;
           }
+
           .pres_speech{
-           color: transparent;
+          
+            color: transparent;
+          
           }
+
 /* end */
 
 
@@ -550,15 +568,19 @@ marquee:hover{
     
 video{
   height: 100%;
-  width: 100%;
-  border-radius: 10px;
+  object-fit: cover;
   }
+
   .vidd{
+
   height: 300px;
   width: 40%;
   border-radius:10px ; 
-  }
+  
+}
+
   .vod{
+
   height: 305px;
   display: flex;
   justify-content: center;
@@ -570,6 +592,180 @@ video{
   
 
 /* end */
+
+/* st */
+
+.Events{
+
+  padding: 20px;
+  width: 100%;
+  height: fit-content;
+  
+
+
+}
+.Men_eve{
+  height: 400px;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  text-align: center; 
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  justify-items: center; 
+  
+}
+.eve{
+  text-align: center;
+  height: 90%;
+  padding: 10px;
+  width: 50%;
+  float: left;
+
+}
+
+#Men_eve{
+  /* background-color: #3E8DA8; */
+  color: white;
+  height: 400px;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  text-align: center; 
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  justify-items: center; 
+  background-color: #3E8DA8;
+}
+
+@media (max-width:800px){
+  .Events{
+    
+    height:2200px ;
+    
+  }
+.Men_eve{
+  padding: 0px 0px;
+  height: 400px;
+  display: block;
+  background-color: transparent;
+}
+#Men_eve{
+  /* height: 500px; */
+  display: none;
+  float: none;
+
+
+}
+.eve{
+
+  width: 100%;
+  border:2px solid green ;
+  height: 100%;
+  background-image: url(pics/omo.gif);
+  margin: 10px;
+
+  float: none;
+}
+
+}
+
+/* start */
+
+
+.gallery-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 400;
+  padding: 10px;
+  /* margin-bottom: 20px; */
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+/* Image position and sizes to replicate the original layout */
+.gallery img:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery img:nth-child(2) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.gallery img:nth-child(3) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.gallery img:nth-child(4) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.gallery img:nth-child(5) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive layout for mobile view */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .gallery img:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .gallery img:nth-child(1),
+  .gallery img:nth-child(2),
+  .gallery img:nth-child(3),
+  .gallery img:nth-child(4),
+  .gallery img:nth-child(5) {
+    grid-column: span 1;
+  }
+}
+/* /end */
+
+
+
+/* end */
+.header__{
+
+    /* width: 100%; */
+    text-align: center;
+    background-color: #f0f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
 
 /* footer */
 
@@ -583,6 +779,7 @@ video{
   background: #3E8DA8;
   border-radius: 6px;
 }
+
 .footer .footer-row {
   display: flex;
   flex-wrap: wrap;
