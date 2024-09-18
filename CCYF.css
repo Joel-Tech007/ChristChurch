@@ -358,6 +358,21 @@ nav .navbar .links li .sub-menu li{
     color: white;
 }
 
+@media (max-width:800px){
+
+    .Top{
+  
+      background-size: cover;
+    }
+  .Top_two{
+  
+  height: 100%;
+  width: 100%;
+  
+  }
+  }
+
+
 *{
 box-sizing: border-box;
 }

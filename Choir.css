@@ -338,6 +338,21 @@ nav .navbar .links li .sub-menu li{
 }
 
 
+@media (max-width:800px){
+
+  .Top{
+
+    background-size: cover;
+  }
+.Top_two{
+
+height: 100%;
+width: 100%;
+
+}
+}
+
+
 .Ser{
     
     background-color: transparent;
