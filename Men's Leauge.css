@@ -314,17 +314,24 @@ nav .navbar .links li .sub-menu li{
 
 
   .Top{
-    background-image: url(pics/bible.jpg);
+    margin-top: 75px;
+    background-image: url(pics/head.jpeg);
     height: 550px;
     width: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     color: #fff;
     font-size: 25px;
     
     
     
-}
+  }
+  .Top_two{
+    width: 100%;
+    height: 87%;
+    opacity: .5;
+    background-color: black;
+  }
 
 
 .Ser{
@@ -366,10 +373,6 @@ img{
     width: 100%;
     
 
-}
-
-marquee:hover{
-    color: black;
 }
 
 
@@ -662,7 +665,6 @@ video{
 .eve{
 
   width: 100%;
-  border:2px solid green ;
   height: 100%;
   background-image: url(pics/omo.gif);
   margin: 10px;
