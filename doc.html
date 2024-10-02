@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Christ Chruch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+           
+      *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }
+  
+  
+    .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+    
+    .loading-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 6px;
+        background: #3E8DA8;
+        transition: width 2s;
+    }
+    
+    .content {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+    
+    .content.visible {
+        opacity: 1;
+    }
+    
+    .floating {
+        transform: translateY(20px);
+        opacity: 0;
+        transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    }
+    
+    .floating.visible {
+        transform: translateY(0);
+        opacity: 1;
+    }
+  
+    
+  
+  .nav {
+    position: fixed;
+    
+    left: 0;
+    width: 100%;
+    padding: 15px 200px;
+    background: black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .nav,
+  .nav .nav-links {
+    display: flex;
+    align-items: center;
+  }
+  .nav {
+    justify-content: space-between;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav a:hover{
+      cursor: pointer;
+      color: #feda15;
+  }
+  .nav .logo {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .nav .nav-links {
+    column-gap: 20px;
+    list-style: none;
+  }
+  .nav .nav-links a {
+    transition: all 0.2s linear;
+  }
+  .nav.openSearch .nav-links a {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .nav .search-icon {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .nav .search-box {
+    position: absolute;
+    right: 250px;
+    height: 45px;
+    max-width: 555px;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s linear;
+  }
+  .nav.openSearch .search-box {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .search-box .search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    left: 15px;
+    color: #4a98f7;
+    transform: translateY(-50%);
+  }
+  .search-box input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 0 15px 0 45px;
+  }
+  
+  .nav .navOpenBtn,
+  .nav .navCloseBtn {
+    display: none;
+  }
+  
+  /* responsive */
+  @media screen and (max-width: 1160px) {
+    .nav {
+      padding: 15px 100px;
+    }
+    .nav .search-box {
+      right: 150px;
+    }
+  }
+  @media screen and (max-width: 950px) {
+    .nav {
+      padding: 15px 50px;
+    }
+    .nav .search-box {
+      right: 100px;
+      max-width: 400px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .nav .navOpenBtn,
+    .nav .navCloseBtn {
+      display: block;
+    }
+    .nav {
+      padding: 15px 20px;
+    }
+    .nav .nav-links {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      height: 100%;
+      max-width: 280px;
+      width: 100%;
+      padding-top: 100px;
+      row-gap: 30px;
+      flex-direction: column;
+      background-color: #11101d;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s ease;
+      z-index: 100;
+    }
+    .nav.openNav .nav-links {
+      left: 0;
+    }
+    .nav .navOpenBtn {
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .nav .navCloseBtn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .nav .search-box {
+      top: calc(100% + 10px);
+      max-width: calc(100% - 20px);
+      right: 50%;
+      transform: translateX(50%);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  /* From Uiverse.io by mobinkakei */ 
+  .wrapper {
+    width: 200px;
+    height: 60px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .circle {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #3E8DA8;
+    left: 15%;
+    transform-origin: 50%;
+    animation: circle7124 .5s alternate infinite ease;
+  }
+  
+  @keyframes circle7124 {
+    0% {
+      top: 60px;
+      height: 5px;
+      border-radius: 50px 50px 25px 25px;
+      transform: scaleX(1.7);
+    }
+  
+    40% {
+      height: 20px;
+      border-radius: 50%;
+      transform: scaleX(1);
+    }
+  
+    100% {
+      top: 0%;
+    }
+  }
+  
+  .circle:nth-child(2) {
+    left: 45%;
+    animation-delay: .2s;
+  }
+  
+  .circle:nth-child(3) {
+    left: auto;
+    right: 15%;
+    animation-delay: .3s;
+  }
+  
+  .shadow {
+    width: 20px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #3E8DA8;
+    position: absolute;
+    top: 62px;
+    transform-origin: 50%;
+    z-index: -1;
+    left: 15%;
+    filter: blur(1px);
+    animation: shadow046 .5s alternate infinite ease;
+  }
+  
+  @keyframes shadow046 {
+    0% {
+      transform: scaleX(1.5);
+    }
+  
+    40% {
+      transform: scaleX(1);
+      opacity: .7;
+    }
+  
+    100% {
+      transform: scaleX(.2);
+      opacity: .4;
+    }
+  }
+  
+  .shadow:nth-child(4) {
+    left: 45%;
+    animation-delay: .2s
+  }
+  
+  .shadow:nth-child(5) {
+    left: auto;
+    right: 15%;
+    animation-delay: .3s;
+  }
+  
+  </style>
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loading-bar" id="loadingBar"></div>
+       
+<div class="wrapper">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="shadow"></div>
+    <div class="shadow"></div>
+    <div class="shadow"></div>
+</div>
+  </div>
+
+    </div>
+
+    <div class="content" id="content">
+        
+
+
+
+
+
+
+        <div class="navvv">
+
+            <nav>
+              <div class="navbar">
+                <i class='bx bx-menu'></i>
+                <div class="logo"><a href="doc.html">Christ Church</a></div>
+                <div class="nav-links">
+                  <div class="sidebar-logo">
+                  <span class="logo-name">Christ Church</span>
+                  <i class='bx bx-x' ></i>
+                </div>
+                <ul class="links">
+                  <li><a href="doc.html">HOME</a></li>
+                  <li>
+                    <a href="#">DEPARTMENTS</a>
+                    <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+                    <ul class="htmlCss-sub-menu sub-menu">
+                      <li><a href="Men's Leauge.html">Men's League</a></li>
+                      <li><a href="Women's Leauge.html">Women's League</a></li>
+                      <li><a href="Choir.html">The Choir</a></li>
+                      <li class="more">
+                        <span><a href="#">More</a>
+                        <i class='bx bxs-chevron-right arrow more-arrow'></i>
+                      </span>
+                        <ul class="more-sub-menu sub-menu">
+                          <li><a href="#">The Children Sunday School / Teens Church</a></li>
+                          <li><a href="CCYF.html">CCYF</a></li>
+                          
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">EVENTS</a>
+                    <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                    <ul class="js-sub-menu sub-menu">
+                      <li><a href="#">HARVEST</a></li>
+                      <li><a href="#">BUILDING PROJECTS</a></li>
+                      <li><a href="#">CONFIRMATION SERVICE</a></li>
+                      <li><a href="#"></a></li>
+                    </ul>
+                  </li>
+                  <li><a href="About Us.html">ABOUT US</a></li>
+                  <li><a href="#">CONTACT US</a></li>
+                </ul>
+              </div>
+              <div class="search-box">
+                <i class='bx bx-search'></i>
+                <div class="input-box">
+                  <input type="text" placeholder="Search...">
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        
+          
+          
+              <!-- start -->
+              <div class="Start_head"  >
+          
+                <div class="head">
+
+                    <!-- <h1 style="color: black;">CHRIST CHURCH</h1> -->
+
+                    
+                    <h2>
+                        Enter to Worship
+
+
+                    </h2>
+                    <h1>    
+                        Depart to Serve
+                    </h1>
+                    <p>Enter God's Presence with a joyful and thankful heart. </p>
+                </div>
+                <div class="heads  ">
+                    <div class="head_head SlideInLeft">
+                        <h1>
+                            WELCOME TO CHRIST CHURCH
+
+                        </h1>
+                        
+                    </div>
+                </div>
+          
+        
+          </div>
+        
+        <!-- end -->
+        <div  class="Upcoming_Events">
+          <div class="events">
+            <div class="First_rgt">
+              <div>
+        
+                <h2>
+                  Upcoming Events
+                </h2>
+                <h1 style=" font-weight: 500;
+                font-size: 37px ;">
+                  EVENTS
+                </h1>
+                  
+              </div>  
+            </div>
+          </div>
+          <div class="events" style="background-image: url(pics/ABCDEFU.jpeg);">
+            <div class="main_events" >
+              <div class="trans">
+                
+        
+                <h1> Zonal Harvest.</h1>
+                <p>A Time to celebrate diversity in culture. It's packed with activities ranging from Dance to Drama showcasing our different cultures and at the same time worshiping the Lord through it.
+        
+                
+                </p>
+              </div>
+          </div>
+        </div>
+          <div class="events" style="background-image: url(pics/familyys.jpeg);">
+            <div class="main_events" >
+              <div class="trans">
+                
+                <h1>Bi-Annual AGM.</h1>
+                <p>FAMILY What is more important than Family especially the family of Chtrist, Come and give thanks to God for what he has done for your family and especially for the body of Christ  
+                </p>
+        
+              </div>
+          </div>
+        </div>
+          <div class="events" style="background-image: url(pics/ABCDEFU.jpeg);">
+            <div class="main_events" >
+              <div class="trans">
+                
+                <h1>Harvest.</h1>
+                <p>Lorem  adipisci corrupti dolorum voluptate repudiandae sapiente aperiam, eius voluptas, fugit placeat at saepe praesentium commodi natus eligendi. Error, maiores.
+                </p>  
+              </div>
+          </div
+          ></div>
+        
+        </div>
+        
+        <!-- end -->
+        
+        <!-- Form -->
+        
+        <div class="Form">
+              
+          <div class="Form_1">
+              <div>
+        
+                <h2>Transforming Lives, Restoring Hope</h2>
+                
+              
+                  
+                  <hr color="#3E8DA8" width="100%">
+                    <p>
+                      August 30th,2024 6:00 PM
+                    </p>
+              </div>
+        </div>
+        
+        <div class="Form_1">
+          <div class="O">
+           <div>
+        
+             <h1>
+               
+               0
+               
+              </h1>
+              <p >
+                Hours
+              </p>
+            </div>
+        </div>
+          <div class="O">
+           <div>
+        
+             <h1>
+               
+               0
+               
+              </h1>
+              <p >
+                Mins
+              </p>
+            </div>
+        </div>
+          <div class="O">
+           <div>
+        
+             <h1>
+               
+               0
+               
+              </h1>
+              <p >
+                Seconds
+              </p>
+            </div>
+        </div>
+        </div>
+        
+         </div>
+        <!-- end -->
+        
+        <!-- Start About Us -->
+        
+        <h1 class="hh1">
+          ABOUT US.
+        </h1>
+        <div class="About_Us">
+            <div class="us">
+              <div class="abt_top"></div>
+              <div class="abt_btm">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus velit ipsam impedit suscipit vero  </p>
+                <a href="Men's Leauge.html">
+        
+                  <button>READ MORE</button>
+                </a>
+              </div>
+            </div>
+            <div class="us">
+              <div class="abt_top"></div>
+              <div class="abt_btm">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus velit ipsam impedit suscipit vero  </p>
+                <button>READ MORE</button>
+              </div>
+            </div>
+            <div class="us">
+              <div class="abt_top"></div>
+              <div class="abt_btm">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus velit ipsam impedit suscipit vero  </p>
+                <button>READ MORE</button>
+              </div>
+            </div>
+        </div>
+        
+         <!-- end -->
+        
+         <!-- start -->
+         <h1 class="late">Latest Sermons.</h1>
+         <div class="Latest">
+          
+        
+            <div class="Sermons">
+              <div class="Ser">
+                <div class="First_one" id="First_one" style="background-image: url(pics/cloud.webp);"></div>
+                <div class="Middle_two">
+                  <div>
+                      <h2 class="H2"> Transforming Live,Restoring Hope</h2>
+                      <p>By <a href="">Very. Rev. David Ama Kalu, </a> July 20, 2024.</p>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="First_one" id="one" >
+                          
+                  <div class="ii">
+                    
+                    <div class="i_i">
+        
+                      <i id="i" class="fa-solid fa-volume-high"></i>
+                      
+                    </div>
+                    
+                    <div class="i_i">
+        
+                      <i id="ii" class="fa-solid fa-video"></i>
+                    
+                    </div>
+                    
+                    <div class="i_i">
+        
+                      <i id="iii" class="fa-solid fa-file-pdf"></i>
+                    
+                    </div>
+                  
+                  </div>
+                  
+                </div>
+              
+              </div>
+              <!--    -->
+              <div class="Ser">
+                <div class="First_one" id="First_one" style="background-image: url(pics/cloud.webp);"></div>
+                <div class="Middle_two">
+                  <div>
+        
+                    <h2 class="H2">
+                      Put Your Faith Into Action
+                    </h2>
+          <p>
+        
+            By <a href="">Rev. Francis</a> July 27, 2024
+          </p>
+        
+                  </div>
+                  
+                </div>
+                <div class="First_one" id="one">
+                  
+                  <div class="ii">
+                    <div class="i_i">
+        
+                      <i id="i" class="fa-solid fa-volume-high"></i>
+                    </div>
+                    <div class="i_i">
+        
+                      <i id="ii" class="fa-solid fa-video"></i>
+                    </div>
+                    <div class="i_i">
+        
+                      <i id="iii" class="fa-solid fa-file-pdf"></i>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="Ser">
+                <div class="First_one" id="First_one" style="background-image: url(pics/cloud.webp    );"></div>
+                <div class="Middle_two">
+                  <div>
+        
+                    <h2 class="H2">
+                      Find And You Shall Seek
+                    </h2>
+          <p>
+        
+            By <a href="">Very. Rev. David Ama Kalu.</a> July 27, 2024
+          </p>
+        
+                  </div>
+                </div>
+                <div class="First_one" id="one"> 
+        
+                  <div class="ii">
+                  
+                    <div class="i_i">
+        
+                      <i id="i" class="fa-solid fa-volume-high"></i>
+                    </div>
+                    <div class="i_i">
+        
+                      <i id="ii" class="fa-solid fa-video"></i>
+                    </div>
+                    <div class="i_i">
+        
+                      <i id="iii" class="fa-solid fa-file-pdf"></i>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+          </div>
+        <!-- end -->
+        
+        <!-- start -->
+         <div class="why">
+        
+                  <div class="wiy" id="wiy">
+          
+                    <h1>TAKE ME TO CHURCH</h1>
+          <br>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi
+               provident distinctio officia sapiente perferendis voluptatibus, illo laborum laudantium omnis similique quo mollitia? Totam maxime alias maiores exercitationem, iusto officia modi. 
+                  
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus assumenda, distinctio quam iure laudantium nam minus obcaecati dolores commodi doloremque ipsum aut laborum dolorem quae debitis illum quisquam explicabo reprehenderit!
+                  
+                    </p>
+          
+                  </div>
+                  <div  class="wiy "  id="yiw">
+        
+        
+                  </div>
+                </div>
+        
+        <!-- end -->
+         <!-- Start -->
+        
+                  <div class="Blog">
+                    <div class="B_L">
+                      <div>
+        
+                        <h3> Our Daily Devotional  </h3>
+                        
+                        <h1>ECHOES OF GRACE</h1>
+                      </div>
+                      
+                    </div>
+                    <div class="B_LL">
+                        <div>
+        
+                          <p>10 July</p>
+                          
+                          <h2>GODS GOAL FOR YOU</h2>
+                          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur exercitationem natus vero pariatur repellendus explicabo aspernatur.</p>
+                        </div>
+        
+                    </div>
+                    
+                    <div class="B_LL" id="B_LL">
+                      <div>
+        
+                        <p>10 July</p>
+                        
+                        <h2>GODS GOAL FOR YOU</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur exercitationem natus vero pariatur repellendus explicabo aspernatur.</p>
+                      </div>
+                    </div>
+                    
+                    <div class="B_LL" id="B_LL">
+                      <div>
+        
+                        <p>10 July</p>
+                        
+                        <h2>GODS GOAL FOR YOU</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur exercitationem natus vero pariatur repellendus explicabo aspernatur.</p>
+                      </div>
+                    </div>
+                  </div>  
+        
+                  <!-- End -->
+        
+        
+                  <!-- Start -->
+            
+        
+                  <div class="gallery-container">
+                    <h2 class="gallery-title">From Gallery</h2>
+                    <div class="gallery">
+                      <img src="pics/bible.jpg" alt="Person">
+                      <img src="pics/bible.jpg" alt="Hands Together">
+                      <img src="pics/bible.jpg" alt="Woman in field">
+                      <img src="pics/bible.jpg" alt="Child Dreaming">
+                      <img src="pics/bible.jpg" alt="Girl with Dandelion">
+                    </div>
+                  </div> 
+                  <!-- end -->
+                  
+                  <!-- Start -->
+                      
+                <div class="why-choose-us "> 
+                  <h2>Our Weekly Activities.</h2>
+                  <div class="reasons">
+                     <div class="reason ">
+                       <i id="sun" class="fa-solid fa-sharp fa-cross "></i>
+                       <h2>Sunday Worship Service</h2>
+                       
+                       <h3> Enter To Worship Depart to Serve</h3>
+                       
+                       <p>First Service 
+                         <b>
+                           
+                           (7:30am - 9:00am) 
+                          </b>
+                          
+                      </p>
+                
+                      <p>
+                        
+                        Sunday School 
+                      <b>
+                        
+                        (9:00am - 10:00am )
+                      </b>
+                      
+                    </p>
+                
+                    <p>
+                        
+                      Second Service
+                      <b>
+                        
+                        (10:00am - 12:00pm)
+                      </b>  
+                      
+                    </p>
+                        
+                    </div>
+                    <div class="reason ">
+                      <i id="sun" class="fa-solid fa-book-open"></i>
+                      <h2>Wednesday Bible Study</h2>
+                      <br>
+                      <p>   Come and Study the Word of God with God's People </p>
+                      
+                      
+                      <p>
+                        
+                        Starts From 
+                        
+                        <b>
+                          (5:00pm - 6:00pm)
+                        </b>
+                      </p>
+                     </div>
+                     <div class="reason ">
+                      <div id="sun">
+        
+                        <i  class="fa-solid fa-sharp fa-wine-glass "></i>
+        
+                      </div>
+                       
+                     <h2>Thursday Prayer and Fasting</h2> 
+                     
+                     
+                     <p>    Man shall not live by food alone but by the word of God 
+                       <br>
+                      <b>
+                        NKJV (James 2:10) 
+                      </b>          </p>
+        
+                      <p>A Time To Wait Upon The Lord </p>
+                      
+                      <p> Starts From <b>(10:00am - 12:00pm)</b></p>
+                     
+                    </div>
+                     
+                  </div>
+                 <!-- <div class="reason-image"></div> -->
+               </div>
+        
+                     
+        
+                    <!-- End -->
+        
+                    <!-- st mission & vission -->
+        
+                    <div class="Mis_Vis" style="background-image: url(pics/);">
+                      <h1>Values.</h1>
+                      
+                      <div class="Mis">
+                        <div class="Vis">
+                          <h2>Mission</h2>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus amet officia numquam iusto in architecto eos ipsa! Maxime blanditiis quae incidunt dignissimos, suscipit sequi? Nemo in eos animi incidunt! Voluptatibus! 
+                            
+                          </p>
+                         
+                        </div>
+                      </div>
+                          <div class="Mis">
+                            <div class="Vis">
+                              <h2>Vision</h2>
+                           
+                              <p>
+                            quae incidunt dignissimos, suscipit sequi? Nemo in eos animi incidunt! Voluptatibus! 
+        
+                          </p>
+                          <a href="About Us.html">
+        
+                            <button>
+                              
+                              <h4>
+                                
+                                Learn More About Our History.
+                              </h4>
+                              
+                              
+                            </button>
+                          </a>
+                          
+                        </div>
+                      </div>
+                      </div>
+                      <br>
+        <div class="Enter_to">
+        <marquee behavior="loop" direction="left">
+        
+          <h1 >ENTER TO WORSHIP DEPART TO SERVE.  GOD BLESS YOU</h1>
+        <p>CHRIST CHURCH  YOU CAN GET TO US THROUGH OUR WHATSAPP <i class="fa-brands fa-whatsapp" style="color: #63E6BE;"></i> +2349034620656, FACEBOOK <i class="fa-brands fa-facebook" style="color: lightblue;"></i>, INSTAGRAM <i class="fa-brands fa-instagram"></i> and ON X(TWITTER) <i class="fa-brands fa-x-twitter" style="color: black;"></i>.  YOU CAN JOIN OUR LIVE SERVICES ON ZOOM. </p>
+        </marquee>
+        </div>
+        
+        
+                    <!-- end mission & vission -->
+        
+                    
+                <!-- footer -->
+        
+        
+                <section class="footer">
+                   <div class="footer-row">
+                    <div class="footer-col">
+                      <h4>Info</h4>
+                      <ul class="links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Compressions</a></li>
+                        <li><a href="#">Customers</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Collection</a></li>
+                      </ul>
+                    </div>
+                    <div class="footer-col">
+                      <h4>Explore</h4>
+                      <ul class="links">
+                        <li><a href="#">Free Designs</a></li>
+                        <li><a href="#">Latest Designs</a></li>
+                        <li><a href="#">Themes</a></li>
+                        <li><a href="#">Popular Designs</a></li>
+                        <li><a href="#">Art Skills</a></li>
+                        <li><a href="#">New Uploads</a></li>
+                      </ul>
+                    </div>
+                    <div class="footer-col">
+                      <h4>Legal</h4>
+                      <ul class="links">
+                        <li><a href="#">Customer Agreement</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Media Kit</a></li>
+                      </ul>
+                    </div>
+                    <div class="footer-col">
+                      <h4>Newsletter</h4>
+                      <p>
+                        Subscribe to our newsletter for a weekly dose
+                        of news, updates, helpful tips, and
+                        exclusive offers.
+                      </p>
+                      <form action="#">
+                        <input type="text" placeholder="Your email" required>
+                        <button type="submit">SUBSCRIBE</button>
+                      </form>
+                      <div class="icons">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-github"></i>
+                      </div>
+                    </div>
+            
+                  </div> 
+                </section>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+    <script src="https://kit.fontawesome.com/a7cbe35a69.js" crossorigin="anonymous"></script>
+    <script>
+        const nav = document.querySelector(".nav"),
+  searchIcon = document.querySelector("#searchIcon"),
+  navOpenBtn = document.querySelector(".navOpenBtn"),
+  navCloseBtn = document.querySelector(".navCloseBtn");
+
+
+navOpenBtn.addEventListener("click", () => {
+  nav.classList.add("openNav");
+  nav.classList.remove("openSearch");
+  searchIcon.classList.replace("uil-times", "uil-search");
+});
+navCloseBtn.addEventListener("click", () => {
+  nav.classList.remove("openNav");
+});
+    </script>
+     <script>
+        // Simulate loading
+        window.onload = function() {
+            const loadingBar = document.getElementById('loadingBar');
+            const loadingScreen = document.querySelector('.loading-screen');
+            const content = document.getElementById('content');
+
+            // Increase the width of the loading bar
+            loadingBar.style.width = '100%';
+
+            // Hide loading screen after 2 seconds
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+                content.classList.add('visible');
+                document.body.style.overflow = 'auto'; // Allow scrolling after loading
+            }, 3000);
+        };
+
+
+
+        
+          // search-box open close js code
+      let navbar = document.querySelector(".navbar");
+      let searchBox = document.querySelector(".search-box .bx-search");
+      // let searchBoxCancel = document.querySelector(".search-box .bx-x");
+      
+      searchBox.addEventListener("click", ()=>{
+        navbar.classList.toggle("showInput");
+        if(navbar.classList.contains("showInput")){
+          searchBox.classList.replace("bx-search" ,"bx-x");
+        }else {
+          searchBox.classList.replace("bx-x" ,"bx-search");
+        }
+      });
+      
+      // sidebar open close js code
+      let navLinks = document.querySelector(".nav-links");
+      let menuOpenBtn = document.querySelector(".navbar .bx-menu");
+      let menuCloseBtn = document.querySelector(".nav-links .bx-x");
+      menuOpenBtn.onclick = function() {
+      navLinks.style.left = "0";
+      }
+      menuCloseBtn.onclick = function() {
+      navLinks.style.left = "-100%";
+      }
+      
+      
+      // sidebar submenu open close js code
+      let htmlcssArrow = document.querySelector(".htmlcss-arrow");
+      htmlcssArrow.onclick = function() {
+       navLinks.classList.toggle("show1");
+      }
+      let moreArrow = document.querySelector(".more-arrow");
+      moreArrow.onclick = function() {
+       navLinks.classList.toggle("show2");
+      }
+      let jsArrow = document.querySelector(".js-arrow");
+      jsArrow.onclick = function() {
+       navLinks.classList.toggle("show3");
+      }
+    </script>
+</body>
+</html>
+
